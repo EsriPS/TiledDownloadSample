@@ -49,7 +49,7 @@ class ViewController: UIViewController {
     let layerURL = URL(string: "https://ibasemaps-api.arcgis.com/arcgis/rest/services/World_Imagery/MapServer/")
     //let layerURL = URL(string: "https://ibasemaps-api.arcgis.com/arcgis/rest/services/World_Basemap_v2/VectorTileServer/")
     
-    let apikey = "AAPK30e5f0cb13734af790a9d9ff7d07c384OAsShCo6wE3jTVxPVHgCAihbKPvY8qa-k502j5YhbVkuk_mAFurCHS36FR8x6QCw"
+    let apikey = ""
     let imageryService = AGSArcGISTiledLayer(url:URL(string:"https://ibasemaps-api.arcgis.com/arcgis/rest/services/World_Imagery/MapServer/")!)
     
     override func viewDidLoad() {
