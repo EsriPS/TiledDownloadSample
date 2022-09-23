@@ -10,12 +10,14 @@
 		30E7068C28DE2DFC002FCB4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E7068B28DE2DFC002FCB4A /* AppDelegate.swift */; };
 		30E7068E28DE2DFC002FCB4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E7068D28DE2DFC002FCB4A /* SceneDelegate.swift */; };
 		30E7069028DE2DFC002FCB4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E7068F28DE2DFC002FCB4A /* ViewController.swift */; };
-		30E7069328DE2DFC002FCB4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E7069128DE2DFC002FCB4A /* Main.storyboard */; };
 		30E7069528DE2DFD002FCB4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30E7069428DE2DFD002FCB4A /* Assets.xcassets */; };
 		30E7069828DE2DFD002FCB4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E7069628DE2DFD002FCB4A /* LaunchScreen.storyboard */; };
 		30E706A328DE2DFE002FCB4A /* TiledDownloadSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E706A228DE2DFE002FCB4A /* TiledDownloadSampleTests.swift */; };
 		30E706AD28DE2DFE002FCB4A /* TiledDownloadSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E706AC28DE2DFE002FCB4A /* TiledDownloadSampleUITests.swift */; };
 		30E706AF28DE2DFE002FCB4A /* TiledDownloadSampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E706AE28DE2DFE002FCB4A /* TiledDownloadSampleUITestsLaunchTests.swift */; };
+		30E706BD28DE2E75002FCB4A /* ArcGIS in Frameworks */ = {isa = PBXBuildFile; productRef = 30E706BC28DE2E75002FCB4A /* ArcGIS */; };
+		30E706BF28DE2EA2002FCB4A /* AGSTileInfo+JSONCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E706BE28DE2EA2002FCB4A /* AGSTileInfo+JSONCodable.swift */; };
+		30E706C128DE32ED002FCB4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E706C028DE32ED002FCB4A /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +42,6 @@
 		30E7068B28DE2DFC002FCB4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30E7068D28DE2DFC002FCB4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		30E7068F28DE2DFC002FCB4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		30E7069228DE2DFC002FCB4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30E7069428DE2DFD002FCB4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30E7069728DE2DFD002FCB4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30E7069928DE2DFD002FCB4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +50,8 @@
 		30E706A828DE2DFE002FCB4A /* TiledDownloadSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TiledDownloadSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E706AC28DE2DFE002FCB4A /* TiledDownloadSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiledDownloadSampleUITests.swift; sourceTree = "<group>"; };
 		30E706AE28DE2DFE002FCB4A /* TiledDownloadSampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiledDownloadSampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		30E706BE28DE2EA2002FCB4A /* AGSTileInfo+JSONCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AGSTileInfo+JSONCodable.swift"; sourceTree = "<group>"; };
+		30E706C028DE32ED002FCB4A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30E706BD28DE2E75002FCB4A /* ArcGIS in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,10 +103,11 @@
 		30E7068A28DE2DFC002FCB4A /* TiledDownloadSample */ = {
 			isa = PBXGroup;
 			children = (
+				30E706BE28DE2EA2002FCB4A /* AGSTileInfo+JSONCodable.swift */,
 				30E7068B28DE2DFC002FCB4A /* AppDelegate.swift */,
 				30E7068D28DE2DFC002FCB4A /* SceneDelegate.swift */,
 				30E7068F28DE2DFC002FCB4A /* ViewController.swift */,
-				30E7069128DE2DFC002FCB4A /* Main.storyboard */,
+				30E706C028DE32ED002FCB4A /* Main.storyboard */,
 				30E7069428DE2DFD002FCB4A /* Assets.xcassets */,
 				30E7069628DE2DFD002FCB4A /* LaunchScreen.storyboard */,
 				30E7069928DE2DFD002FCB4A /* Info.plist */,
@@ -143,6 +148,9 @@
 			dependencies = (
 			);
 			name = TiledDownloadSample;
+			packageProductDependencies = (
+				30E706BC28DE2E75002FCB4A /* ArcGIS */,
+			);
 			productName = TiledDownloadSample;
 			productReference = 30E7068828DE2DFC002FCB4A /* TiledDownloadSample.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,9 @@
 				Base,
 			);
 			mainGroup = 30E7067F28DE2DFC002FCB4A;
+			packageReferences = (
+				30E706BB28DE2E75002FCB4A /* XCRemoteSwiftPackageReference "arcgis-runtime-ios" */,
+			);
 			productRefGroup = 30E7068928DE2DFC002FCB4A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,9 +242,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30E706C128DE32ED002FCB4A /* Main.storyboard in Resources */,
 				30E7069828DE2DFD002FCB4A /* LaunchScreen.storyboard in Resources */,
 				30E7069528DE2DFD002FCB4A /* Assets.xcassets in Resources */,
-				30E7069328DE2DFC002FCB4A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30E706BF28DE2EA2002FCB4A /* AGSTileInfo+JSONCodable.swift in Sources */,
 				30E7069028DE2DFC002FCB4A /* ViewController.swift in Sources */,
 				30E7068C28DE2DFC002FCB4A /* AppDelegate.swift in Sources */,
 				30E7068E28DE2DFC002FCB4A /* SceneDelegate.swift in Sources */,
@@ -297,14 +309,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		30E7069128DE2DFC002FCB4A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				30E7069228DE2DFC002FCB4A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		30E7069628DE2DFD002FCB4A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -602,6 +606,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		30E706BB28DE2E75002FCB4A /* XCRemoteSwiftPackageReference "arcgis-runtime-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/esri/arcgis-runtime-ios";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		30E706BC28DE2E75002FCB4A /* ArcGIS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30E706BB28DE2E75002FCB4A /* XCRemoteSwiftPackageReference "arcgis-runtime-ios" */;
+			productName = ArcGIS;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 30E7068028DE2DFC002FCB4A /* Project object */;
 }

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TiledDownloadSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bC1-js-cXG" userLabel="View">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bSM-ae-cX1" customClass="AGSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="588"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b1z-Al-BJD">
+                                <rect key="frame" x="0.0" y="687" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem title="Download Tiles" id="8vX-Ug-kN7" userLabel="Download Button Item">
+                                        <connections>
+                                            <action selector="generateSmallOfflineMapAction" destination="BYZ-38-t0r" id="1uB-v9-KZK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="IJM-bm-YiN"/>
+                                    <barButtonItem title="Go Offline" id="I1v-aw-ElS" userLabel="offline">
+                                        <connections>
+                                            <action selector="goOfflineMapAction" destination="BYZ-38-t0r" id="lec-CY-IlN"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MGz-W9-6zx">
+                                <rect key="frame" x="45" y="70" width="313" height="450"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GSM-qI-beh" userLabel="Progress Parent View">
+                                <rect key="frame" x="0.0" y="596" width="414" height="91"/>
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8tW-H9-O3g">
+                                        <rect key="frame" x="8" y="16" width="315" height="4"/>
+                                    </progressView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSd-Dx-WA6" userLabel="Progress Label">
+                                        <rect key="frame" x="186.33333333333334" y="28" width="41.333333333333343" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="XqU-Pf-WvS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="8tW-H9-O3g" firstAttribute="leading" secondItem="GSM-qI-beh" secondAttribute="leadingMargin" id="0j2-5A-zvw"/>
+                                    <constraint firstItem="LSd-Dx-WA6" firstAttribute="centerX" secondItem="GSM-qI-beh" secondAttribute="centerX" id="LKQ-EB-Ew2"/>
+                                    <constraint firstAttribute="trailing" secondItem="8tW-H9-O3g" secondAttribute="trailing" constant="91" id="bjj-C0-gAH"/>
+                                    <constraint firstItem="LSd-Dx-WA6" firstAttribute="top" secondItem="8tW-H9-O3g" secondAttribute="bottom" constant="8" symbolic="YES" id="cit-Oe-3Mh"/>
+                                    <constraint firstItem="8tW-H9-O3g" firstAttribute="top" secondItem="GSM-qI-beh" secondAttribute="top" constant="16" id="mVi-jL-v9m"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bke-Km-BFz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <rect key="contentStretch" x="0.0" y="0.0" width="0.84999999999999998" height="0.84999999999999998"/>
+                        <constraints>
+                            <constraint firstItem="bke-Km-BFz" firstAttribute="trailing" secondItem="MGz-W9-6zx" secondAttribute="trailing" constant="56" id="0aQ-Kc-iWV"/>
+                            <constraint firstItem="bke-Km-BFz" firstAttribute="bottom" secondItem="b1z-Al-BJD" secondAttribute="bottom" constant="5" id="5X9-jz-c20"/>
+                            <constraint firstAttribute="trailing" secondItem="bSM-ae-cX1" secondAttribute="trailing" id="F8e-w4-OLt"/>
+                            <constraint firstItem="GSM-qI-beh" firstAttribute="bottom" secondItem="b1z-Al-BJD" secondAttribute="top" id="GXn-un-DlD"/>
+                            <constraint firstItem="bSM-ae-cX1" firstAttribute="leading" secondItem="bC1-js-cXG" secondAttribute="leading" id="IhO-a7-Sno"/>
+                            <constraint firstItem="GSM-qI-beh" firstAttribute="top" secondItem="MGz-W9-6zx" secondAttribute="bottom" constant="76" id="Il9-Mb-iA7"/>
+                            <constraint firstItem="GSM-qI-beh" firstAttribute="leading" secondItem="b1z-Al-BJD" secondAttribute="leading" id="Jph-xx-qwd"/>
+                            <constraint firstAttribute="bottom" secondItem="bSM-ae-cX1" secondAttribute="bottom" constant="148" id="ceM-ik-OEI"/>
+                            <constraint firstItem="GSM-qI-beh" firstAttribute="trailing" secondItem="b1z-Al-BJD" secondAttribute="trailing" id="eq5-vK-Phi"/>
+                            <constraint firstItem="MGz-W9-6zx" firstAttribute="top" secondItem="bke-Km-BFz" secondAttribute="top" constant="70" id="j9z-3h-fNe"/>
+                            <constraint firstItem="GSM-qI-beh" firstAttribute="top" secondItem="bSM-ae-cX1" secondAttribute="bottom" constant="8" symbolic="YES" id="jv5-Wf-jvZ"/>
+                            <constraint firstItem="GSM-qI-beh" firstAttribute="leading" secondItem="bSM-ae-cX1" secondAttribute="leading" id="oSE-Pb-fmv"/>
+                            <constraint firstItem="bSM-ae-cX1" firstAttribute="top" secondItem="bke-Km-BFz" secondAttribute="top" id="oiH-pv-GQ6"/>
+                            <constraint firstItem="MGz-W9-6zx" firstAttribute="leading" secondItem="bke-Km-BFz" secondAttribute="leading" constant="45" id="rHi-3o-CZv"/>
+                            <constraint firstItem="GSM-qI-beh" firstAttribute="trailing" secondItem="bSM-ae-cX1" secondAttribute="trailing" id="v7l-XZ-r2I"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="extentView" destination="MGz-W9-6zx" id="vdR-5L-SLn"/>
+                        <outlet property="goOfflineButtonItem" destination="I1v-aw-ElS" id="ryX-9w-ZJ8"/>
+                        <outlet property="mapView" destination="bSM-ae-cX1" id="sJS-uH-Qi0"/>
+                        <outlet property="progressLabel" destination="LSd-Dx-WA6" id="zrE-Tk-IU3"/>
+                        <outlet property="progressView" destination="8tW-H9-O3g" id="dhI-ee-Vzg"/>
+                        <outlet property="smallButtonItem" destination="8vX-Ug-kN7" id="A6H-B2-RUQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="135.32608695652175"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
